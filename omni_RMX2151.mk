@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+
 # Release name
 PRODUCT_RELEASE_NAME := RMX2151
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
