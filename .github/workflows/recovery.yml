@@ -16,7 +16,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
+  MANIFEST: https://github.com/SHRP/manifest.git -b shrp-12.1
   DEVICE: RMX2020
   DT_LINK: https://github.com/Gofaraway71/device_realme_RMX2151-SHRP
   DT_PATH: device/realme/RMX2020
