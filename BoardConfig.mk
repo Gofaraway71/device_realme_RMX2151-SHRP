@@ -66,6 +66,7 @@ BOARD_SUPER_PARTITION_SIZE := 6685720576
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 6685720576
 BOARD_MAIN_PARTITION_LIST := product vendor system
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive androidboot.usbconfigfs=true
