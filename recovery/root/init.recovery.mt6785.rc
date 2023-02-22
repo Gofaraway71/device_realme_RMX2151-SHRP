@@ -12,9 +12,9 @@ on early-init
     start vold    
     
 on fs
+    install_keyring
+    write /sys/class/oplus_chg/usb/otg_switch 1
     write /sys/class/power_supply/usb/otg_switch 1
-    start hwservicemanager
-    start servicemanager
 
 service hwservicemanager /system/bin/hwservicemanager
     user root
@@ -96,8 +96,6 @@ on property:ro.crypto.state=unsupported
     stop teei_daemon
     stop hal_cryptoeng_oppo
     stop mobicore
-    stop servicemanager
-    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
 
@@ -105,24 +103,18 @@ on property:ro.crypto.state=unencrypted
     stop teei_daemon
     stop hal_cryptoeng_oppo
     stop mobicore
-    stop servicemanager
-    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
 
 on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop hal_cryptoeng_oppo
     stop mobicore
-    stop servicemanager
-    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
     
 on property:enable.fbe.service=0
     stop hal_cryptoeng_oppo
     stop mobicore
-    stop servicemanager
-    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeperd
     stop vendor.gatekeeper-1-0    
