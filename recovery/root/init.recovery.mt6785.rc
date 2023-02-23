@@ -1,4 +1,6 @@
 import /init.recovery.teei_daemon.rc
+import /tee.rc
+import /trustonic.rc
 
 on init
     mkdir /mnt/vendor/persist
