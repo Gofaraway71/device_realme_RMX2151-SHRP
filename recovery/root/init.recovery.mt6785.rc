@@ -102,6 +102,8 @@ on property:ro.crypto.state=unsupported
     stop gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
+    install_keyring
+    setprop crypto.ready 1     
     stop teei_daemon
     stop hal_cryptoeng_oppo
     stop mobicore
