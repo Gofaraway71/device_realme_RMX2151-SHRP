@@ -40,6 +40,5 @@ product		/product		ext4		display="Product";logical
 /persistent      emmc /dev/block/platform/bootdevice/by-name/frp
 /proinfo         emmc /dev/block/platform/bootdevice/by-name/proinfo
 
-# External storages
-/external_sd		auto	/dev/block/mmcblk0p1			flags=display="External SD card";storage;wipeingui;removable;backup=0
-/usb-otg                auto    /dev/block/sda1              /dev/block/sda        flags=display="USB Storage";storage;wipeingui;removable
+/external_sd     auto /dev/block/mmcblk0p1 /dev/block/mmcblk0                flags=storage;wipeingui;removable;backup=0
+/usbotg          vfat /dev/block/sdd1      /dev/block/sdd                    flags=display="USB-OTG";storage;wipeingui;removable;backup=0
