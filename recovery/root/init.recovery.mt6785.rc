@@ -15,6 +15,7 @@ on early-init
     
 on fs
     install_keyring
+    setprop crypto.ready 1    
     write /sys/class/oplus_chg/usb/otg_switch 1
     write /sys/class/power_supply/usb/otg_switch 1
 
@@ -121,7 +122,7 @@ on property:enable.fbe.service=0
     stop mobicore
     stop keymaster-4-0
     stop gatekeeperd
-    stop vendor.gatekeeper-1-0    
+    stop gatekeeper-1-0    
 
 on property:sys.usb.config=fastboot
     start servicemanager
