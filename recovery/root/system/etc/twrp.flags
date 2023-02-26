@@ -2,7 +2,10 @@ system		/system			ext4		logical
 vendor		/vendor			ext4		display="Vendor";logical
 product		/product		ext4		display="Product";logical
 
-/data             ext4     /dev/block/platform/bootdevice/by-name/userdata     flags=fileencryption=aes-256-xts;keydirectory=/metadata/vold/metadata_encryption
+#Metadata
+/md_udc 	    ext4	/dev/block/platform/bootdevice/by-name/md_udc           flags=backup=1
+#Common partitions
+/data		    ext4	/dev/block/platform/bootdevice/by-name/userdata         flags=fileencryption=aes-256-xts;backup=1
 /cache            ext4     /dev/block/platform/bootdevice/by-name/cache        flags=backup=1;wipeingui;wipeduringfactoryreset
 /boot             emmc     /dev/block/platform/bootdevice/by-name/boot         flags=backup=1;flashimg=1
 /dtbo             emmc     /dev/block/platform/bootdevice/by-name/dtbo         flags=display="dtbo";backup=1;flashimg=1
@@ -15,7 +18,6 @@ product		/product		ext4		display="Product";logical
 /nvram           emmc /dev/block/platform/bootdevice/by-name/nvram           flags=display="NVRAM";backup=1
 /nvcfg           ext4 /dev/block/platform/bootdevice/by-name/nvcfg           flags=display="NVCFG";backup=1;subpartitionof=/nvram
 /nvdata          ext4 /dev/block/platform/bootdevice/by-name/nvdata          flags=display="NVDATA";backup=1;subpartitionof=/nvram
-/persist         ext4 /dev/block/platform/bootdevice/by-name/persist         flags=display="Persist";backup=1
 /protect_f       ext4 /dev/block/platform/bootdevice/by-name/protect1        flags=display="Protect_F";backup=1
 /protect_s       ext4 /dev/block/platform/bootdevice/by-name/protect2        flags=display="Protect_S";backup=1
 /audio_dsp       emmc /dev/block/platform/bootdevice/by-name/audio_dsp
