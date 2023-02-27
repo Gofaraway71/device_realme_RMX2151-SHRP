@@ -1,4 +1,4 @@
-import /init.recovery.teei_daemon.rc
+import /init.recovery.microtrust.rc
 import /tee.rc
 import /trustonic.rc
 
@@ -70,7 +70,7 @@ service vendor.vibrator-1-0 system/bin/android.hardware.vibrator@1.0-service
     disabled
     seclabel u:r:recovery:s0    
 
-service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     user root
     group root
     disabled
