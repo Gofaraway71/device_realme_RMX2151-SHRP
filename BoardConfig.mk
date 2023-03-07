@@ -132,14 +132,14 @@ BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster41 \
     libkeymaster4 \
-    libkeymaster3 \    
-    libpuresoftkeymasterdevice    
+    libkeymaster3 \
+    libpuresoftkeymasterdevice
     
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3.so \    
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so    
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
